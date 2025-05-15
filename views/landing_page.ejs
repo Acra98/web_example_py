@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tech Innovators</title>
+    <link rel="stylesheet" href="landing_style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="logo">
+                <h1>Tech Innovators</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Services</a>
+                        <div class="dropdown-content">
+                            <a href="/web-design">Web Design</a>
+                            <a href="/development">Development</a>
+                            <a href="/seo">SEO Services</a>
+                        </div>
+                    </li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- About Us Section -->
+    <section id="about-us" class="section-container">
+        <h2>About Us</h2>
+        <p>We are a team of passionate professionals dedicated to providing the best IT services to our clients. With years of experience in the industry, we specialize in Web Design, Development, SEO, and much more. Our mission is to deliver quality solutions tailored to your business needs.</p>
+        <p>Our focus is to help businesses grow through innovative technologies, optimized strategies, and exceptional customer service.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-container">
+        <h2>Our Services</h2>
+        <a href="/web-design">
+            <div class="service">
+                <h3>Web Design</h3>
+                <p>We design modern and user-friendly websites that are responsive, mobile-friendly, and visually appealing.</p>
+            </div>
+        </a>
+        <a href="/development">
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>Our expert developers build robust and scalable web applications to meet your business needs.</p>
+            </div>
+        </a>
+        <a href="/seo">
+            <div class="service">
+                <h3>SEO Services</h3>
+                <p>Boost your website's visibility with our tailored SEO strategies that drive organic traffic and improve rankings.</p>
+            </div>
+        </a>
+    </section>
+    
+    <!-- Image Carousel Section -->
+    <section class="carousel-container" id="carousel-container">
+        <div class="carousel" id="carousel">
+            <div class="carousel-item">
+                <img src="/images/image_1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/image_2.avif" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/image_3.jpeg" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/image_4.jpeg" alt="Image 4">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"The team at Tech Innovators has been amazing. They helped us redesign our website, and we saw a significant increase in traffic and customer engagement."</p>
+            <cite>- Sarah Williams, CEO of Digital Ventures</cite>
+        </div>
+        <div class="testimonial">
+            <p>"Their SEO services took our website to the next level. We saw a noticeable improvement in our search engine rankings and website performance."</p>
+            <cite>- John Doe, Marketing Manager at Bright Ideas Solutions</cite>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <a href="/contact" class="cta-button">
+        <section id="contact" class="section-container">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Feel free to reach out to us. We would love to hear from you!</p>
+        </section>
+    </a>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Tech Innovators. All rights reserved.</p>
+            <p>Follow us on:</p>
+            <ul class="social-links">
+                <!-- Link to trigger the modal -->
+                <a href="#" class="video-link" data-video="dQw4w9WgXcQ">Facebook</a>
+                <a href="#" class="video-link" data-video="dQw4w9WgXcQ">Twitter</a>
+                <a href="#" class="video-link" data-video="dQw4w9WgXcQ">LinkedIn</a>
+            </ul>
+        </div>
+        <!-- Modal structure -->
+        <div id="videoModal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <!-- Embed YouTube video in iframe -->
+            <iframe id="videoIframe" width="560" height="315" 
+              src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+    </footer>
+    
+    <script src="../carousel.js"></script>
+    <script src="../video.js"></script>
+    <script>
+        // Add event listener to handle dropdown change
+        document.getElementById("pages").addEventListener("change", function() {
+            // Get the selected value (the URL to redirect to)
+            const selectedPage = this.value;
+            
+            // Redirect to the selected page
+            window.location.href = selectedPage;
+        });
+    </script>
+</body>
+
+</html>
+

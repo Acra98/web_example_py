@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Go Back Button (placed inside the contact form section or anywhere) -->
+        <a href="javascript:history.back()" class="go-back-button">Go Back</a>
+        <h1>Contact Us</h1>
+    </header>
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Feel free to reach out to us. We would love to hear from you!</p>
+    <form action="/submit-contact" method="POST">
+        
+        <!-- Name Field -->
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+        
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+        
+        <!-- Subject Field -->
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Subject of your inquiry">
+        </div>
+        
+        <!-- Message Field -->
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Write your message here"></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="cta-button">Submit</button>
+    </form>
+</section>
+
+    <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Tech Innovators. All rights reserved.</p>
+                <p>Follow us on:</p>
+                <ul class="social-links">
+                    <!-- Link to trigger the modal -->
+                    <a href="#" class="video-link" data-video="dQw4w9WgXcQ">Facebook</a>
+                    <a href="#" class="video-link" data-video="dQw4w9WgXcQ">Twitter</a>
+                    <a href="#" class="video-link" data-video="dQw4w9WgXcQ">LinkedIn</a>
+                </ul>
+            </div>
+            <!-- Modal structure -->
+            <div id="videoModal" class="modal">
+              <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <!-- Embed YouTube video in iframe -->
+                <iframe id="videoIframe" width="560" height="315" 
+                  src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+        </footer>
+        <script src="../video.js"></script>
+</body>
+</html>
+

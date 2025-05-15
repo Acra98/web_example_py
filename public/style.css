@@ -1,0 +1,433 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Global Link Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: #16a085;  /* Teal background */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header .hero {
+    background: linear-gradient(45deg, #e74c3c, #8e44ad);  /* Gradient background */
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+header .hero-content p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #ecf0f1;
+}
+
+/* Go Back Button (Top Left-aligned) */
+.go-back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #e74c3c;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 20;
+}
+
+/* Hover effect for the Go Back Button */
+.go-back-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;  /* Dark gray-blue */
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+    color: #f39c12;  /* Yellow color */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #3498db;  /* Blue hover effect */
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+section {
+    padding: 60px 30px;
+    margin: 30px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Hover Effect for Sections */
+section:hover {
+    background-color: #ecf0f1;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Heading */
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #16a085;  /* Teal color */
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #f39c12, #3498db);  /* Gradient heading */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Paragraph Styling Inside Sections */
+section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #7f8c8d;
+}
+
+/* Call to Action Button Styling */
+section .cta-button {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #9b59b6;  /* Purple button */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section .cta-button:hover {
+    background-color: #8e44ad;  /* Darker purple hover */
+    transform: translateY(-2px);
+}
+
+/* Service Card Style */
+.service {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #f39c12, #e74c3c);  /* Gradient background for cards */
+}
+
+.service h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section */
+.testimonial {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f39c12, #2980b9);  /* Gradient background for testimonials */
+}
+
+.testimonial p {
+    font-size: 1.3rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial cite {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 600;
+}
+
+/* Contact Form Styling */
+#contact form {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #8e44ad, #f39c12);  /* Gradient background for form */
+}
+
+#contact .form-group {
+    margin-bottom: 25px;
+}
+
+#contact label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #16a085;  /* Green border focus */
+    outline: none;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact .cta-button {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #9b59b6;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact .cta-button:hover {
+    background-color: #8e44ad;
+    transform: translateY(-2px);
+}
+
+/* Footer Section Styling */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer .social-links li {
+    margin: 0 10px;
+}
+
+footer .social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    .service {
+        margin-bottom: 20px;
+    }
+
+    #contact form {
+        padding: 20px;
+    }
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer .social-links li {
+    margin: 0 10px;
+}
+
+footer .social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #3498db;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8); /* Black background with transparency */
+  overflow: auto; /* Enable scrolling if needed */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.video-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 20px; /* Add space between links */
+}
+
+.video-link:hover {
+  text-decoration: underline;
+}
