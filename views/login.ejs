@@ -5,24 +5,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome to Tech Innovators</title>
-        <link rel="stylesheet" href="landing_style.css">
+        <link rel="stylesheet" href="public/landing_style.css">
+        <link rel="stylesheet" href="public/style.css">
     </head>
     
     <body>
         <!-- Header Section -->
         <header>
-            <!-- Navigation Bar -->
-            <div class="navbar">
-                <div class="logo">
-                    <h1>Tech Innovators</h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="/login">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <!-- Go Back Button (placed inside the contact form section or anywhere) -->
+        <a href="javascript:history.back()" class="go-back-button">Go Back</a>
+        <h1>Log into your account </h1>
         </header>
+
+        <!-- Login Form Section -->
+        <section id="login-form" class="section-container">
+            <form action="/login" method="POST" id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="login-button">Login</button>
+                <p>Don't have an account? <a href="/register">Register here</a></p>
+            </form>
     </body>
 </html>
 

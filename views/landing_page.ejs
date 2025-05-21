@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Tech Innovators</title>
-    <link rel="stylesheet" href="landing_style.css">
+    <link rel="stylesheet" href="/public/landing_style.css">
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <!-- Navigation Bar -->
@@ -142,6 +141,28 @@
         });
     </script>
 </body>
-
-</html>
-
+    <script src="../carousel.js"></script>
+    <script src="../video.js"></script>
+    <script>
+        // Check if redirected from register.js
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Checking for redirect parameters');
+            const urlParams = new URLSearchParams(window.location.search);
+            console.log('URL Parameters:', urlParams.toString());
+            
+            if (urlParams.has('from') && urlParams.get('from') === 'register') {
+                console.log('Showing registration success alert');
+                alert('Registered successfully, you can now log in!');
+            }
+        });
+        
+        // Add event listener to handle dropdown change
+        document.getElementById("pages").addEventListener("change", function() {
+            // Get the selected value (the URL to redirect to)
+            const selectedPage = this.value;
+            
+            // Redirect to the selected page
+            window.location.href = selectedPage;
+        });
+    </script>
+</body>

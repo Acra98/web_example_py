@@ -39,27 +39,31 @@ document.addEventListener('DOMContentLoaded', function() {
             disableScroll(); // Lock scroll in the carousel section
         }
 
-        // If we reach the first item, allow scroll up
-        if (currentIndex === 0) {
-            enableScroll();  // Unlock scroll when on the first image
+        // Reset scroll behavior based on position
+            if (currentIndex === 0 || currentIndex === totalItems - 1) {
+                enableScroll();  // Allow scrolling at first or last slide
+            } else {
+                disableScroll(); // Lock scrolling for middle slides
+            }
+    
+            // Wait for the transition to complete before allowing more scroll
+            setTimeout(() => {
+                isScrolling = false;
+            }, 500);  // Transition duration
         }
-
-        // Wait for the transition to complete before allowing more scroll
-        setTimeout(() => {
-            isScrolling = false;
-        }, 500);  // Transition duration
-    }
-
-    // Listen for mouse wheel scroll events on the carousel container
-    carouselContainer.addEventListener('wheel', (e) => {
+    
+        // Listen for mouse wheel scroll events on the carousel container
+        carouselContainer.addEventListener('wheel', (e) => {
         if (isScrolling) return;  // Prevent scroll during transition
-
+        
+        e.preventDefault(); // Prevent default scroll behavior
+        
         if (e.deltaY > 0) {
             scrollCarousel('next');  // Scroll to the next image
         } else if (e.deltaY < 0) {
             scrollCarousel('prev');  // Scroll to the previous image
         }
-    });
+        }, { passive: false });
 
     // Check if the carousel is in view and lock scroll when it is
     let carouselInView = false;

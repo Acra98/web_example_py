@@ -104,9 +104,88 @@ header .hero-content p {
 }
 
 .navbar nav ul li a:hover {
-    background-color: #3498db;  /* Blue hover effect */
+    background-color: #16a085;  /* Blue hover effect */
     transform: scale(1.1);
 }
+
+#login_navbar {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    padding: 15px 30px; /* Optional: Add some padding for better spacing */
+    background-color: #16a085; /* Dark gray-blue */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#login_navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #16a085;
+}
+
+#login_navbar ul li {
+    margin-left: 15px; /* Optional: Add some space between the list items */
+}
+.login-navbar {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    padding: 15px 30px; /* Optional: Add some padding for better spacing */
+    background-color: #34495e; /* Dark gray-blue */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-navbar a {
+    color: #ecf0f1;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.login-navbar a:hover {
+    background-color: #3498db; /* Blue hover effect */
+    transform: scale(1.1);
+}
+
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3498db; /* Blue background */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.login-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+#loginForm
+{
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-out;
+}   
 
 /* Section Styling */
 section {
@@ -344,7 +423,6 @@ footer .social-links a:hover {
     }
 }
 
-
 /* Footer Styling */
 footer {
     background-color: #2c3e50;
@@ -430,4 +508,40 @@ footer .social-links a:hover {
 
 .video-link:hover {
   text-decoration: underline;
+}
+
+#register-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Adds margin between inputs and button */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.register-button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3498db; /* Blue background */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Adds margin between the last input and the button */
+}
+
+.register-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px);
 }
